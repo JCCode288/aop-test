@@ -12,12 +12,15 @@ function validateForm(data) {
 }
 
 export default function SecondPage() {
-   const { handleNavigation } = useInitialData("/third");
+   const {
+      handleNavigation,
+      data = {
+         name: "",
+         email: "",
+      },
+   } = useInitialData("/third");
 
-   const [form, setForm] = useState({
-      name: "",
-      email: "",
-   });
+   const [form, setForm] = useState(() => data);
 
    const handleSubmit = (e) => {
       e.preventDefault();
@@ -29,7 +32,10 @@ export default function SecondPage() {
       }
 
       const doneString = `username ${form.name} with email ${form.email} has been submitted`;
-      return alert(doneString);
+
+      alert(doneString);
+
+      setForm(() => data);
    };
 
    const handleChange = (e) => {
