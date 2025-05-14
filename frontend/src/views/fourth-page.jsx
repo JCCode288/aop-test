@@ -2,11 +2,14 @@ import { useSearchParams } from "react-router";
 import useInitialData from "../hooks/useInitialData";
 import { useMemo } from "react";
 import PaginationGroup from "../components/pagination";
+import PageButton from "../components/page-button";
 
 export default function FourthPage() {
    const {
       data: { items },
+      back,
    } = useInitialData();
+
    const params = new URLSearchParams({
       page: items.page,
       limit: items.limit,
@@ -39,6 +42,7 @@ export default function FourthPage() {
    return (
       <div>
          <h1>Fourth Page</h1>
+         <PageButton label="back" func={back} />
          <div
             style={{
                display: "flex",

@@ -6,6 +6,7 @@ import { validateForm } from "../utils/form.validation";
 export default function SecondPage() {
    const {
       handleNavigation,
+      back,
       data = {
          name: "",
          email: "",
@@ -40,6 +41,7 @@ export default function SecondPage() {
    return (
       <div>
          <h1>Second Question</h1>
+         <PageButton label="back" func={back} />
          <div style={{ display: "flex", justifyContent: "center" }}>
             <form
                style={{

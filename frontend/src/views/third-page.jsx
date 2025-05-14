@@ -5,7 +5,7 @@ import useInitialData from "../hooks/useInitialData";
 import useFetch from "../hooks/useFetch";
 
 export default function ThirdPage() {
-   const { handleNavigation } = useInitialData("/fourth");
+   const { handleNavigation, back } = useInitialData("/fourth");
 
    const { loading, error, data } = useFetch("/posts", "get");
 
@@ -20,6 +20,7 @@ export default function ThirdPage() {
    return (
       <div>
          <h1>Third Question</h1>
+         <PageButton label="back" func={back} />
          <div style={{ display: "flex" }}>
             {loading && <div>Loading data..</div>}
             {!loading && data.length && (

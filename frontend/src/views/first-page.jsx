@@ -28,7 +28,7 @@ export default function FirstPage() {
    return (
       <div>
          <h1>First Question</h1>
-
+         <PageButton label="back" func={back} />
          <div
             style={{
                display: "flex",
