@@ -8,8 +8,6 @@ export default function ThirdPage() {
       data: { posts },
    } = useInitialData("/fourth");
 
-   console.log(posts);
-
    return (
       <div>
          <h1>Third Question</h1>
