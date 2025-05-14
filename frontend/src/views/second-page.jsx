@@ -1,15 +1,7 @@
 import { useState } from "react";
 import PageButton from "../components/page-button";
 import useInitialData from "../hooks/useInitialData";
-
-function validateForm(data) {
-   const errors = [];
-   for (const key in data) {
-      if (!data[key]) errors.push(key);
-   }
-
-   return errors;
-}
+import { validateForm } from "../utils/form.validation";
 
 export default function SecondPage() {
    const {
@@ -27,7 +19,7 @@ export default function SecondPage() {
 
       const errors = validateForm(form);
       if (errors.length) {
-         const errString = `${errors.join(", ")} is not filled`;
+         const errString = errors.join("\n");
          return alert(errString);
       }
 
