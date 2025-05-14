@@ -27,18 +27,6 @@ const routes = [
    {
       path: "/third",
       element: <ThirdPage />,
-      loader: async () => {
-         try {
-            const { data: posts } = await Axios.get("/posts");
-
-            return { posts };
-         } catch (err) {
-            console.error(err);
-            console.log("[Failed to fetch todo data]");
-
-            return { posts: [] };
-         }
-      },
    },
 
    {
