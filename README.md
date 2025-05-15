@@ -112,6 +112,8 @@ ORDER BY "total_selling" DESC
 
 ### 4. Buatkan mini project CRUD dengan menggunakan React sebagai FrontEnd dan NodeJS koa framework typescript sebagai BackEnd dan Postgresql sebagai Databasenya.
 
+> Check folder koa-react
+
 ### 5. Apakah code typescript di bawah sudah baik dan benar dalam penulisannya?
 
 > <img src="./assets/5.png">
