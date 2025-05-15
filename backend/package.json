@@ -1,0 +1,28 @@
+{
+   "name": "backend",
+   "version": "1.0.0",
+   "main": "index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "optz:compile": "tsc ./optimization/index.ts --esModuleInterop --outDir ./dist/optimization",
+      "optz:run": "node ./dist/optimization/index.js",
+      "main:compile": "tsc --watch",
+      "main:run": "node --watch ./dist/src/index.js"
+   },
+   "author": "",
+   "license": "ISC",
+   "description": "",
+   "dependencies": {
+      "bcryptjs": "^3.0.2",
+      "dotenv": "^16.5.0",
+      "express": "^5.1.0",
+      "jsonwebtoken": "^9.0.2"
+   },
+   "devDependencies": {
+      "@types/bcryptjs": "^2.4.6",
+      "@types/express": "^5.0.1",
+      "@types/jsonwebtoken": "^9.0.9",
+      "tsc": "^2.0.4",
+      "typescript": "^5.8.3"
+   }
+}
